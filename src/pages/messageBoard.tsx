@@ -8,7 +8,7 @@ function MessageBoard() {
   console.log(location);
     return (
         <div className={styles.header}>
-          留言板
+          我超级爱郭兴佩，她是世界上最美的宝宝！
         </div>
     )
 }
