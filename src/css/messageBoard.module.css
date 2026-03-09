@@ -1,0 +1,13 @@
+/* 留言板 */
+.header{
+  width: 100%;
+  height: 300px;
+  background: url(../images/home/bgc-IXDcA65l.webp) no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-size: 30px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,44 +1,42 @@
-import { useEffect} from 'react';
+import React, { Suspense } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
+import { BrowserRouter, useRoutes, useLocation} from 'react-router-dom';
 import { Button} from 'antd';
 import 'antd/dist/antd.css'
-import axios from 'axios';
+import routes from './router'
+import Nav from './components/nav';
 
-function Home(){
-  console.log(process.env.REACT_APP_A);
-  return <h2>首页1</h2>
-}
-function About(){
-  // useEffect(()=>{
-  //   axios.get('/api/data').then(res=>{
-  //     console.log(res.data);  
-  //   })
-  // },[])
-  return <Button type='primary'>关于我</Button>
-}
+function AppContent() {
+  const location = useLocation();
   
+  // 定义不需要导航栏的路径
+  const noNavPaths = ['/login', '/register', '/404'];
+  
+  // 判断是否显示导航栏
+  const showNav = !noNavPaths.includes(location.pathname);
+
+  return (
+    <div>
+      {showNav && <Nav />}
+    </div>
+  );
+}
+
+//路由组件
+function RouterElement(){
+  const element = useRoutes(routes);
+  return element;
+}
+
 function App() {
   return (
-     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to='/'>首页</Link>
-            </li>
-            <li>
-              <Link to='/about'>关于我自己</Link>
-            </li>
-          </ul>
-        </nav>
+    <BrowserRouter>
+      <AppContent />
+      <Suspense fallback={<div>页面加载中...</div>}>
+        <RouterElement />
+      </Suspense>
+    </BrowserRouter>
 
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-        </Routes>
-      </div>
-     </Router>
   );
 }
 
