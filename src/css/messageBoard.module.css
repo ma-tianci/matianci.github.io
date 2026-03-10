@@ -11,3 +11,99 @@
   justify-content: center;
   align-items: center;
 }
+.content{
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  width: 72vw;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  background-color: #f5f7fa;
+}
+.liuyanContent{
+  flex: 1;
+  max-width: calc(72vw - 280px);
+  padding-left: 40px;
+  box-sizing: border-box;
+  .liuyanWrap{
+  background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ebeef5;
+    padding: 20px;
+    box-sizing: border-box;
+    height: fit-content;
+    .inputWrap{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .title{
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      color: #333;
+    }
+    
+  }
+  .numtTitle{
+    font-size: 14px;
+    margin: 10px 0;
+    color: #333;
+  }
+}
+.liuyanList{
+  .liuyanItem{
+    background-color: #fff;
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ebeef5;
+    padding: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+     /* 初始阴影（很淡或者没有） */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease-out;
+    transform: translateY(0);
+    &:hover {
+      box-shadow: 0 20px 40px rgba(0, 0,0, 0.15);
+    }
+    .userPhoto{
+      width: 50px;
+      height: 50px;
+      margin-right: 20px;
+      img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+    }
+    .liuyanText{
+      width: calc(100% - 70px);
+      .nameTime{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        .name{
+          font-size: 14px;
+          font-weight: bold;
+        }
+        .textTime{
+          text-align: end;
+          font-size: 12px;
+          color: #999;
+        }
+      }
+      .liuyanTextContent{
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #333;
+      }
+
+    }
+  }
+}
