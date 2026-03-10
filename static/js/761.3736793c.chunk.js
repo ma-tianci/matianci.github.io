@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunkmy_blog=globalThis.webpackChunkmy_blog||[]).push([[761],{761(s,a,e){e.r(a),e.d(a,{default:()=>n});var o=e(847);const l="messageBoard_header__dtKSb";var c=e(579);const n=function(){const s=(0,o.zy)();return console.log(s),(0,c.jsx)("div",{className:l,children:"\u6211\u548c\u90ed\u5174\u4f69\u8981\u76f8\u7231\u4e00\u4e07\u5e74\uff01"})}}}]);
+//# sourceMappingURL=761.3736793c.chunk.js.map
